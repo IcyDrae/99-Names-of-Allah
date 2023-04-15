@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #ece9e6, #fff);
+    font-family: 'Dosis', sans-serif;
+}
+
+.app-wrapper {
+    text-align: center;
+    max-width: 1680px;
+    height: 100%;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+}
+
+.introduction-container {
+    padding: 50px 0;
+    text-align: left;
+}
+
+.introduction-content-container {
+    margin: auto;
+    text-align: center;
+}
+
+.basmala-arabic {
+    margin-bottom: 0;
+}
+
+.basmala-arabic, .name {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.introduction-container .introduction-content-container .basmala-english {
+    margin-top: 0;
+}
+
+.introduction-container .introduction-content-container .basmala-transliteration {
+    margin-top: 0;
+}
+
+.introduction-text {
+    text-align: left;
+}
+
+blockquote {
+    margin: 50px auto;
+    color: #2e2e2e;
+    border-left: 5px solid #787878;
+    border-radius: 7px;
+    position: relative;
+    background: #EDEDED;
+}
+
+blockquote::before {
+    content: "\201C";
+    color: #787878;
+    font-size: 94px;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+blockquote::after {
+    content: '';
+}
+
+blockquote span {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.names-container {
+    padding: 50px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.number-container {
+    z-index: 10;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 10px;
+}
+
+.name-container {
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    z-index: 10;
+    text-align: center;
+    padding: 10px;
+}
+
+.name-container .background-image {
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: inherit;
+    height: inherit;
+    -webkit-filter: brightness(65%);
+    -moz-filter: brightness(65%);
+    -o-filter: brightness(65%);
+    -ms-filter: brightness(65%);
+    filter: brightness(65%);
+}
+
+.name {
+    margin: 0;
+}
+
+.transliteration {
+    margin: 5px;
+    font-weight: 500;
+}
+
+.appears-in-container .tooltip-container {
+    position: relative;
+    bottom: 10px;
+    cursor: help;
+}
+
+.appears-in-container .tooltip-container .tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.appears-in-container .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+}
+
+.appears-in-container a {
+    color: white;
+}
+
+.end-ayah-container .end-ayah {
+    font-size: 24px;
+}
+
+.end-ayah-container .end-ayah-reference {
+    font-size: 18px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .footer-content > a {
+    color: black;
+    padding: 1rem;
+}
+
+.copyright-element a, .privacy-policy-content-container a {
+    color: blue;
+}
+
+@media only screen and (min-width: 320px) {
+    .main-container, footer {
+        padding: 1rem 2rem;
+    }
+
+    .introduction-content-container {
+        width: 100%;
+    }
+
+    .introduction-container .introduction-content-container .basmala-arabic {
+        font-size: 34px;
+    }
+
+    .introduction-container .introduction-content-container .basmala-transliteration {
+        font-size: 20px;
+    }
+
+    .introduction-container .introduction-content-container .basmala-english {
+        font-size: 24px;
+    }
+
+    .introduction-text {
+        font-size: 20px;
+    }
+
+    blockquote {
+        padding: 1em 25px 1em 35px;
+        line-height: 1.2;
+    }
+
+    .names-container {
+        justify-content: center;
+    }
+
+    .name-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .number-container {
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .transliteration {
+        font-size: 18px;
+    }
+
+    .translation {
+        font-size: 18px;
+    }
+
+    .appears-in-container .tooltip-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-container, footer {
+        padding: 3rem 5rem;
+    }
+
+    .introduction-container .introduction-content-container .basmala-arabic {
+        font-size: 64px;
+    }
+
+    .introduction-container .introduction-content-container .basmala-transliteration {
+        font-size: 28px;
+    }
+
+    .introduction-container .introduction-content-container .basmala-english {
+        font-size: 34px;
+    }
+
+    .introduction-text {
+        font-size: 24px;
+    }
+
+    blockquote {
+        padding: 1.2em 30px 1.2em 75px;
+        line-height: 1.6;
+    }
+
+    .names-container {
+        justify-content: space-between;
+    }
+
+    .name-container {
+        width: 350px;
+        height: 350px;
+    }
+
+    .number-container {
+        font-size: 38px;
+    }
+
+    .name {
+        font-size: 52px;
+    }
+
+    .transliteration {
+        font-size: 22px;
+    }
+
+    .translation {
+        font-size: 24px;
+    }
+
+    .appears-in-container .tooltip-container {
+        display: inline-block;
+    }
+}
